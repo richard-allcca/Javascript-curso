@@ -1,0 +1,13 @@
+{
+  "cadena": "Richard",
+  "numero": "35",
+  "boleano": "true",
+  "arreglo": ["correr", "programar", "cocinar"],
+  "objeto": {
+    "twiter": "@richard",
+    "email": "richard_allcca_llano@hotmail.com"
+  },
+  "nulo": null,
+
+  "notas": "Json tiene un metodo (JSON.parse(aqui el valor entre comillas dobles) para convertir texto a tokens validos para js y tambien un metodo (JSON.stringify(aqui el valor sin comillas) convertir objetos validos de js en cadenas de texto"
+}

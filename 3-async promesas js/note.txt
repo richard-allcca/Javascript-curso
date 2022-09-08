@@ -1,0 +1,8 @@
+caracteristicas de javascript 
+- Procesamiento Single thread y Multi thread
+- Operaciones de CPU y Operaciones de I/O
+- Operaciones Concurrentes y Paralelas
+- Operaciones Bloqueantes y No Bloqueantes
+- Paralelas Síncronas y Asíncronas
+
+javascript usa un modelo asincrono y no bloqueante, con un loop de eventos implementado en un solo hilo, (Single thread) para Operaciones de entrada y salida (input/ouput)

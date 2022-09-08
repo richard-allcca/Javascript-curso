@@ -1,0 +1,11 @@
+body {
+  background-color: #f1f2f3;
+}
+.grid-fluid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.loader {
+  display: block;
+  margin: auto;
+}

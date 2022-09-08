@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="65caracteres">
+  <title>Buscador de Canciones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- form de busqueda -->
+  <h1>Buscador de Canciones</h1>
+  <form id="song-search">
+    <input type="text" name="artist" id="" placeholder="Nombre del Interprete" autofocus>
+    <br>
+    <input type="text" name="song" id="" placeholder="Nombre de la Cación">
+    <br>
+    <input type="submit" value="Buscar">
+  </form>
+  <!-- svg de cargando -->
+  <img src="assets/Spinner-1s-244px.svg" alt="Cargando.." class="loader">
+
+  <!-- para manejdar los erroes -->
+  <aside class="error"></aside>
+
+  <!-- resultado de busqueda -->
+  <main>
+    <article class="artist">
+      <!-- <h2>Informacion del Artista</h2> -->
+    </article>
+    <article class="song">
+      <!-- <h2>Letra de la Cancion</h2> -->
+    </article>
+  </main>
+</body>
+<script src="index.js"></script>
+
+</html>

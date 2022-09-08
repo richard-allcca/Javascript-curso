@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="65caracteres">
+  <title>Delegación de Eventos</title>
+  <link rel="stylesheet" href="delegacion.css">
+</head>
+
+<body>
+  <h1>Eventos en Javascript</h1>
+  <h2>Delegación de Eventos</h2>
+  <p>Un manejador se le llama cuando se ejecutan funciones dentro del evento</p>
+
+  <!-- evento poco recomendado como atributo del html -->
+  <button onclick="alert('hola mundo')">Evento con atributo HTML</button>
+
+  <!-- evento poco recomendado como atributo del html desde Js -->
+  <button onclick="holaMundo()">Evento ejecutado desde Js</button>
+  <br><br>
+
+  <!-- Manejador de eventos o delegando eventos  -->
+  <button id="evento-semantico">Evento con manejador semantico</button>
+  <p>por la coherencia en la manera en que se va definiendo</p>
+
+  <button id="evento-multiple">Evento con manejador multiple</button>
+  <p>por la coherencia en la manera en que se va definiendo</p>
+</body>
+<script src="delegandoEventos.js"></script>
+
+</html>

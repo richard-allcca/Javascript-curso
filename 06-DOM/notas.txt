@@ -1,0 +1,26 @@
+APIs 
+   programing aplication Interface
+   Interfaz de programación de aplicacion
+DOM 
+   document objet model
+   modelos de objetos del Documento, es una API para Documentos HTML y XML
+   -Éste proveé una representación estructural del documento, permitiendo modificar su contenido y presentación visual mediante código JS.
+   -El DOM no es parte de la especificación de javaScript es una API  para los navegadores.
+BOM 
+   browser objet model
+CSSOM 
+   css objet model
+
+node de texto
+   es un texto que tiene dentro una etiqueta como un h1
+node de tipo elemento
+   una etiqueta en particular
+
+JavaScript puede cambiar el contenido HTML:
+   document.getElementById("demo").innerHTML = "Hello JavaScript!";
+
+JavaScript puede cambiar estilos HTML:
+   document.getElementById("demo").style.fontSize = "25px";
+
+JavaScript puede cambiar los atributos HTML:
+   document.getElementById("image").src = "picture.gif";

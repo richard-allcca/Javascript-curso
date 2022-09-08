@@ -1,0 +1,15 @@
+body {
+  background-color: lightblue;
+  text-align: center;
+}
+.grid-fluid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.loader {
+  display: block;
+  margin: auto;
+}
+a {
+  font-size: 25px;
+}

@@ -1,0 +1,36 @@
+.bloque {
+	margin: 0 auto;
+	/* text-align: center; */
+	border: 1px solid blue;
+	width: 400px;
+	height: 400px;
+	/* position: relative; */
+}
+.hijo {
+	border: 1px solid red;
+	width: 100px;
+	height: 100px;
+	/* position: absolute; */
+	top: 0rem;
+	left: 0em;
+	display: inline-grid;
+}
+.hijo2 {
+	border: 1px solid red;
+	width: 100px;
+	height: 100px;
+	/* position: absolute; */
+	/* top: 0rem;
+	left: 0em; */
+	display: inline-grid;
+}
+.hijo1 {
+	border: 1px solid red;
+	width: 100px;
+	height: 100px;
+	/* position: absolute; */
+	/* top: 0rem;
+	left: 0em; */
+	display: inline-grid;
+	flex-wrap: nowrap;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="65caracteres">
+  <title>Word Presss Consumo de datos</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Word Press Consumo de datos</h1>
+  <!-- datos de la pagina o blog -->
+  <article id="site" class="site"></article>
+  <!-- contenido o post de la pagina -->
+  <section id="posts" class="posts"></section>
+  <!--  -->
+  <img src="./assets/Spinner-1s-244px.svg" alt="Cargando.." class="loader">
+
+  <!-- template -->
+  <template id="post-template">
+    <article class="post">
+      <img src="" alt="" class="post-image">
+      <aside>
+        <h2 class="post-title"></h2>
+        <figure class="post-author"></figure>
+        <small class="post-date"></small>
+        <a class="post-link" target="_blank">Ver publicación original</a>
+        <p class="post-excerpt"></p>
+        <div class="post-categories"></div>
+        <div class="post-tags"></div>
+        <details class="post-content">
+          <summary>Ver contenido </summary>
+          <article></article>
+        </details>
+      </aside>
+    </article>
+    <hr>
+  </template>
+
+</body>
+<script src="index.js"></script>
+
+</html>

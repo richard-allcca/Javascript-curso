@@ -1,0 +1,33 @@
+
+HTTPS://malvestida.com/wp-json
+Content-Type: application/json
+###
+HTTPS://malvestida.com/wp-json
+
+###
+HTTPS://malvestida.com/wp-json/wp/v2
+
+###
+HTTPS://malvestida.com/wp-json/wp/v2/posts?_embed
+
+###
+HTTPS://malvestida.com/wp-json/wp/v2/posts
+
+###
+HTTPS://malvestida.com/wp-json/wp/v2/categories
+
+###
+HTTPS://malvestida.com/wp-json/wp/v2/search?_embed&search=
+
+###
+POST  HTTPS://malvestida.com/wp-json/wp/v2/search?_embed&search=
+Content-Type: application/json
+{
+  "title": "prueba de REST Client"
+}
+
+### SPA imagen portada
+GET HTTPS://css-tricks.COM/wp-json/wp/v2/posts/341793
+
+### url para post del search 
+GET HTTPS://css-tricks.COM/wp-json/wp/v2/search?_embed&search=flexbox

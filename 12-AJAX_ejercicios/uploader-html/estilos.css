@@ -1,0 +1,20 @@
+
+html{
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+*,
+*:before,
+*:after{
+  box-sizing: border-box;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  background-color: hsla(180, 100%, 50%,.5);
+}

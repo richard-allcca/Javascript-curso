@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="65caracteres">
+  <title>Probando</title>
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      background-image: radial-gradient(circle at center,
+          rgb(121, 180, 218),
+          rgb(57, 57, 235));
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content {
+      /* width: 50vw; */
+      /* height: 80vh; */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      /* align-items: center; */
+      border: 1px solid;
+    }
+
+    h1 {
+      width: 100vw;
+      text-align: center;
+    }
+
+    .si {
+      padding: 0.5em;
+      color: hsla(10, 500%, 50%, 1);
+      border-radius: 5px;
+      margin: 15px;
+    }
+
+    .no {
+      padding: 0.5em;
+      color: hsla(250, 500%, 50%, 1);
+      border-radius: 5px;
+      margin: 15px;
+      /* transform: translate(50px 50px); */
+    }
+
+    @media screen and (min-width: 740px) {
+      body {
+        height: 100vh;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        text-align: center;
+        width: 100vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="content">
+    <h1>Puedo ser parte de tu Ganado?🙏</h1>
+    <div class="content-si">
+      <button style="color: red;" class="si" type="button">Si</button>
+      <button class="no" type="button">No</button>
+    </div>
+  </section>
+
+</body>
+<script>
+
+  const d = document;
+
+  const $si = d.querySelector(".si");
+  const $no = d.querySelector(".no");
+  const $content = d.querySelector(".content");
+  const $body = d.querySelector("body");
+
+  let $limitContentX = 0;
+  let $limitContentY = 0;
+
+  let x = 0;
+  let y = 0;
+
+  //? carga las medidas del documento para darle un limite al translate
+  d.addEventListener("DOMContentLoaded", () => {
+    // $limitContentX = Math.floor($content.getBoundingClientRect().x)
+    // $limitContentY = Math.floor($content.getBoundingClientRect().y)
+    $limitContentX = $si.getBoundingClientRect().width;
+    $limitContentY = $no.getBoundingClientRect().height;
+    $limitBody = $body.getBoundingClientRect().width;
+  });
+
+  //? genera los numeros parax - y del trnaslate
+  const random = () => {
+    x = Math.floor(Math.random() * ($limitContentX - 100) - 150);
+    y = Math.floor(Math.random() * ($limitContentY - 100) - 150);
+    // console.log(x, y);
+  };
+
+  //? funciones de movimiento
+  function click() {
+    random();
+    $no.style.transform = `translate(${x}px, ${y}px)`;
+  }
+  function movil() {
+    random();
+    $no.style.setProperty("translate", `${x}px ${y}px`);
+  }
+
+  //? eventos para ejecutar funciones de movimiento
+  d.addEventListener("touchstart", (e) => {
+    if (e.target === $no) {
+      movil();
+    }
+    if (e.target === $si) {
+      alert("Sabia que dirias que si 😁");
+    }
+  });
+
+  d.addEventListener("mouseover", (e) => {
+    if (e.target === $no) {
+      click();
+    }
+    if (e.target === $si) {
+      alert("Sabia que dirias que si 😁");
+    }
+  });
+  $no.addEventListener("click", (e) => {
+    $no.textContent = "Si";
+    $si.textContent = "No";
+    setTimeout(() => {
+      alert("Sabia que dirias que SI!😍");
+    }, 1000);
+  });
+
+</script>
+
+<!-- <script src="index.js"></script> -->
+
+</html>

@@ -1,0 +1,19 @@
+body form {
+  margin: 1rem auto;
+}
+form {
+  width: 80%;
+  padding: 1rem;
+  display: flex;
+  /* justify-content: center; */
+  place-items: center;
+  flex-direction: column;
+  box-shadow: 1px 5px 10px grey;
+}
+form * {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+form input[type="submit"] {
+  width: 5rem;
+}

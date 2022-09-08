@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="MI PRIMERA CRUD">
+  <title>CRUD API REST AJAX</title>
+</head>
+
+<body>
+  <h1>CRUD API REST AJAX - FETCH - AXIOS</h1>
+  <section class="crud">
+    <!-- Formulario -->
+    <article>
+      <h2 class="crud-title">Agregar Santo</h2>
+      <form class="crud-form">
+        <input type="text" name="nombre" placeholder="nombre" required>
+        <br>
+        <input type="text" name="constelacion" placeholder="constelacion" required>
+        <br>
+        <input type="submit" value="enviar">
+        <input type="hidden" name="id"><!-- input oculto -->
+      </form>
+    </article>
+    <!-- tabla de impreción de santos -->
+    <article>
+      <h2>Santos</h2>
+      <table class="crud-table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Constelación</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody> </tbody>
+      </table>
+    </article>
+  </section>
+
+  <!--**** Template ****-->
+  <template id="crud-template">
+    <tr>
+      <td class="name"></td>
+      <td class="constelacion"></td>
+      <td>
+        <button class="edit">Editar</button>
+        <button class="eliminar">Eliminar</button>
+      </td>
+    </tr>
+  </template>
+</body>
+
+<script src="./app.js" type="module"></script>
+<!-- <script src="crud_xhr.js"></script> -->
+<!-- <script src="crud_fetch.js"></script> -->
+<!-- <script src="crud_axios.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+
+</html>

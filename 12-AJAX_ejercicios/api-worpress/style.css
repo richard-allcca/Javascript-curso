@@ -1,0 +1,93 @@
+html {
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+a {
+  color: hsl(206, 99%, 31%);
+  transition: all 0.3s ease-out;
+}
+a:hover {
+  opacity: 0.75;
+}
+img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 2px 5px 10px black;
+  margin-top: 1rem;
+}
+h1 {
+  text-align: center;
+}
+/* .post-image {
+  width: 150px;
+  height: auto;
+} */
+hr {
+  border: thin solid hsl(206, 99%, 31%);
+  margin: 3rem auto;
+  width: 80%;
+}
+.site {
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 50%;
+  text-align: center;
+}
+.post {
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 3rem;
+  text-align: center;
+  max-width: 80%;
+  background-color: hsl(204, 15%, 94%);
+  box-shadow: 2px 5px 10px gray;
+}
+/* .post img {
+  text-align: center;
+} */
+.post-author img {
+  border-radius: 50%;
+}
+.post-date {
+  margin: 1rem auto;
+  display: block;
+}
+.post-exerpt,
+.post-categories,
+.post-tags,
+.post-content {
+  text-align: left;
+}
+/* ! revisa esto */
+.post-content {
+  margin-left: 1.5rem;
+}
+.post-content summary {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.post-content {
+  padding: 1rem;
+  background-color: hsl(205, 100%, 90%);
+  border-radius: 3rem;
+}
+.post-content img {
+  display: block;
+  margin: auto;
+}
+.loader {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  left: 45%;
+  top: 100px;
+  display: none;
+  background: none;
+}
