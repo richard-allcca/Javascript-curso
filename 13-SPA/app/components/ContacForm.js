@@ -10,78 +10,78 @@ export function ContacForm() {
   $loader.classList.add("none");
 
   $styles.innerHTML = `
-.contact-form {
-  --form-ok-color: hsl(122, 39%, 49%);
-  --form-error-color: hsl(4, 90%, 58%);
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  /* border: 1px solid; */
-}
-.contact-form > * {
-  display: block;
-  padding: 0.5rem;
-  margin: 1rem;
-  width: 100%;
-  margin-left: 0px;
-}
-.contact-form textarea {
-  resize: none;
-}
-.contact-form legend,
-.contact-form-response {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: center;
-}
-.contact-form input,
-.contact-form textarea {
-  font-size: 1rem;
-  font-family: sans-serif;
-}
-.contact-form input[type="submit"] {
-  width: 50%;
-  font-weight: bold;
-  cursor: pointer;
-  margin-left: 25%;
-}
-/* todos los contenidos que tengas el atributo placeholder */
-.contact-form *::placeholder {
-  color: hsl(0, 0%, 0%);
-}
-.contact-form [required]:valid {
-  border: thin solid var(--form-ok-color);
-}
-.contact-form [required]:invalid {
-  border: thin solid var(--form-error-color);
-}
-/* msj de error con js */
-.contact-form-error {
-  margin-top: -1rem;
-  font-size: 80%;
-  background-color: var(--form-error-color);
-  color: hsl(0, 0%, 100%);
-  transition: all 800ms ease;
-}
-.contact-form-error.is-active {
-  display: block;
-  /* animacion show-message dura, cuantas veces se ejecuta, forma de ejecucion(normal),no tiene retardo(0), efecto de animacon ease-out(afuera), va conservar los estilos con los que termine */
-  animation: show-message 1s 1 normal 0s ease-out both;
-}
-.none {
-  display: none;
-}
-/* animación */
-@keyframes show-message {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
-}
+    .contact-form {
+      --form-ok-color: hsl(122, 39%, 49%);
+      --form-error-color: hsl(4, 90%, 58%);
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      /* border: 1px solid; */
+    }
+    .contact-form > * {
+      display: block;
+      padding: 0.5rem;
+      margin: 1rem;
+      width: 100%;
+      margin-left: 0px;
+    }
+    .contact-form textarea {
+      resize: none;
+    }
+    .contact-form legend,
+    .contact-form-response {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 1rem;
+      font-family: sans-serif;
+    }
+    .contact-form input[type="submit"] {
+      width: 50%;
+      font-weight: bold;
+      cursor: pointer;
+      margin-left: 25%;
+    }
+    /* todos los contenidos que tengas el atributo placeholder */
+    .contact-form *::placeholder {
+      color: hsl(0, 0%, 0%);
+    }
+    .contact-form [required]:valid {
+      border: thin solid var(--form-ok-color);
+    }
+    .contact-form [required]:invalid {
+      border: thin solid var(--form-error-color);
+    }
+    
+    .contact-form-error {
+      margin-top: -1rem;
+      font-size: 80%;
+      background-color: var(--form-error-color);
+      color: hsl(0, 0%, 100%);
+      transition: all 800ms ease;
+    }
+    .contact-form-error.is-active {
+      display: block;
+      /* animacion show-message dura, cuantas veces se ejecuta, forma de ejecucion(normal),no tiene retardo(0), efecto de animacon ease-out(afuera), va conservar los estilos con los que termine */
+      animation: show-message 1s 1 normal 0s ease-out both;
+    }
+    .none {
+      display: none;
+    }
+    /* animación */
+    @keyframes show-message {
+      0% {
+        visibility: hidden;
+        opacity: 0;
+      }
+      100% {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
   `;
 
   $form.innerHTML = `
@@ -106,7 +106,9 @@ export function ContacForm() {
         </div>
         `;
 
-  //* ================== validación From ==================
+  // ==================
+  // validación From
+  // ==================
 
   function contactFormValidations() {
     const $form = d.querySelector(".contact-form"),
@@ -148,7 +150,9 @@ export function ContacForm() {
       }
     });
 
-    //* ================== Envio Form ==================
+    // ==================
+    // Envio Form
+    // ==================
 
     d.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -188,8 +192,7 @@ export function ContacForm() {
     });
   }
 
-  //* ============= retardo de ejecucion para permitir carga del DOM en una SPA=============
-
+  // retardo de ejecucion para permitir carga del DOM en una SPA
   setTimeout(() => {
     contactFormValidations();
   }, 500);

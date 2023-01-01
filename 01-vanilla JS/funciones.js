@@ -71,29 +71,28 @@ setTimeout(() => {
   alert('hola')
 }, 3000)
 
-
+ 
 // ===============================
 //? FUNCIONES RETORNADAS
 // ===============================
-/* muy parecio a un anidado pero revisa bien el codigo
-esto se hace cuando puede estar todo en 1 linea solo en ese caso no usas { } ` */
+// muy parecio a un anidado pero revisa bien el codigo
 
 const dosomething = x => y => x * y
 
-let a = dosomething(2)(2)
+let a1 = dosomething(2)(2)
 let b = dosomething(3)
 
-console.log((a)(b(3)))
+console.log((a1)(b(3)))
 
 // ===============================
 //? FUNCIONES PURAS, no causa efectos secundarios y siempre devuelve el mismo
-// ===============================
+// =============================== 
 // valor para los mismos parametros
 
 let a = 'hola'
 const saludar = (saludo, persona) => {
-  let dato = `${a} ${saludar} `
-}
+  let dato = `${a} ${saludar} `   
+} 
 console.log(a, prompt('¿cual es tu nombre'))
 
 /*   SCOPE

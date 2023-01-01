@@ -11,7 +11,7 @@ console.log(edades.flat());
 console.log(edades.flat(Infinity));
 
 // =================================================================
-//? FLATMAP para obtener datos de un objeto en un solo Array al mismo tiempo yo priero usar template strin con maps
+//? FLATMAP para obtener datos de un objeto en un solo Array al mismo tiempo yo prefiero usar template strin con maps
 // =================================================================
 
 const productos = [
@@ -53,6 +53,13 @@ const producto = new Map([
 
 console.log(Object.fromEntries(producto));
 
+// - Método sin Object.fromEntries()
+
+productos.reduce((total, actual) => {
+  const [propiedad, valor] = actual;
+  return { ...total, [propiedad]: valor };
+});
+
 // =================================================================
 //? NOVEDADES para String
 // =================================================================
@@ -69,3 +76,4 @@ function toString() {
   console.log("convertido a texto");
 }
 toString.toString();
+

@@ -4,7 +4,7 @@ function Node(data) {
   this.data = data;
 }
 
-let c = new Node('C:/')
+let c = new Node('C:/');
 let users = new Node('Users');
 let system = new Node('System');
 
@@ -28,6 +28,6 @@ function recorrido(node) {
   recorrido(node.left);
   recorrido(node.right);
 }
-recorrido(c)
+recorrido(c);
 
 // comentario para probar pr

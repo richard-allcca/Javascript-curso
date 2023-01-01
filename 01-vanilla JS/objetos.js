@@ -13,12 +13,15 @@ const objeto = {
   // ===============================
   //? function declarada usa THIS normal
   // ===============================
+
   saludar: function saludar() {
     console.log(`hola mi nombre es ${this.nombre}`);
   },
+
   // ===============================
   //? Arrow function toman el scope superior por eso THIS no les funciona
   // ===============================
+
   pregunt: () => {
     console.log(`que edad crees que tengo? ${this[edad]}`);
   },
@@ -28,19 +31,22 @@ objeto.saludar(); //usando this.propiedad de forma normal
 objeto.pregunt(); //usando this[propiedad] con corchetes
 
 // =================================================================
-//? AGREGAR propiedades y valores a un objeto
+// AGREGAR propiedades y valores a un objeto
 // =================================================================
+
 objeto.nombre = "richard";
 
 // =================================================================
-//? ELIMINAR propiedad de un objeto
+// ELIMINAR propiedad de un objeto
 // =================================================================
+
 delete objeto.propiedad;
 delete objeto["propiedad"];
 
 // =================================================================
-//? BUSCAR en un objeto
+// BUSCAR en un objeto
 // =================================================================
+
 Object.keys(nameObjeto);
 // devuelve un array con todos las propiedades(key) enumerables y propias(no de la  cadena de prototipos) de un objeto o.
 
@@ -62,18 +68,21 @@ Object.getOwnPropertyDescriptor(objeto, "nombre");
 // =================================================================
 //? COMPARAR Type
 // =================================================================
+
 Object.is(nameObjeto);
 //  permite comparar dos datos a nivel muy estricto
 
 // =================================================================
 //? HERENCIA Asignar propeidades de un obj a otro
 // =================================================================
+
 Object.assign(objetoReceptor, objetoDonador);
 // Asigna las propiedades de un objeto a otro
 
 // =================================================================
 //? ITERAR un objeto
 // =================================================================
+
 const obj = {
   name: "richard",
   gustos: ["pc"],

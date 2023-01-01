@@ -4,17 +4,17 @@
 
 // REVIEW - Los operadores lógicos &&, || y ?? ahora también pueden usarse para asignar valores de una forma más sencilla y corta. Perfecto para asignar valores por defecto a variables.
 
-// Si x es falsy, se le asigna y
+// Si X es falsy, null o undefined se le asigna Y
 x ||= y;
 // Equivale a...
 x || (x = y);
 
-// Si x es truthy, se le asigna y
+// Solo si X es truthy, ' ', [] ó {} se le asigna Y
 x &&= y;
 // Equivale a...
 x && (x = y);
 
-// Si x es null o undefined, se le asigna y
+// Si X es null o undefined, se le asigna Y
 x ??= y;
 // Equivale a...
 x ?? (x = y);

@@ -1,46 +1,58 @@
-const GAME_OPTIONS = [ "PIEDRA", "PAPEL", "TIJERA" ];
-
-// NOTE - dentro de cada primer elemento del "GAME_RULES" solo le pasamos una propiedad debido a que por defecto otra opcion es falsa
-
-const GAME_RULES = {
-   PIEDRA: {
-      TIJERA: true
-   },
-   PAPEL: {
-      PIEDRA: true
-   },
-   TIJERA: {
-      PAPEL: true
-   }
-}
-
-
+// ===============================================
+//  No Switch double
+// ===============================================
 function game(player1, player2) {
-   if (!GAME_OPTIONS.includes(player1) | !GAME_OPTIONS.includes(player2)) {
-      throw new Error('Opción de juego no válida');
-   }
+	const GAME_OPTIONS = ["PIEDRA", "PAPEL", "TIJERA"];
 
-   if (player1 === player2) return 'Empate';
+	// NOTE - cada primer elemento del "GAME_RULES" solo tiene una propiedad debido a que por defecto una 3° es falsa
 
-   // NOTE - si el valor de player1 y "player2" es true, gana el 1 pero si alguno es "false" entonces gana el 2
-   return GAME_RULES[ player1 ][ player2 ] ? 'Player1 gana' : 'Player2 gana';
+	const GAME_RULES = {
+		PIEDRA: {
+			TIJERA: true,
+		},
+		PAPEL: {
+			PIEDRA: true,
+		},
+		TIJERA: {
+			PAPEL: true,
+		},
+	};
+
+	if (!GAME_OPTIONS.includes(player1) | !GAME_OPTIONS.includes(player2)) {
+		throw new Error("Opción de juego no válida");
+	}
+
+	if (player1 === player2) return "Empate";
+
+	// NOTE -  El return busca el 2 nivales para llegar al true
+
+	return GAME_RULES[player1][player2] ? "Player1 gana" : "Player2 gana";
 }
 
-console.log(game('PAPEL', 'TIJERA')) // Player2 gana
-
+console.log(game("PAPEL", "TIJERA")); // Player2 gana
 
 // =================================================
+//  No Switch sigle
+// =================================================
 
-const adversario = 'Iron-man';
+const adversario = "Iron-man";
 
-const LOKI_DISFRACES = {
-   'Iron-man': 'Magneto',
-   Thor: 'Odin',
-   hulk: 'Thanos'
-}
+const noSwitch = (heroe) => {
+	let hero = heroe.toLowerCase();
 
-const LOKI_DEFAULT = 'Loki';
+	const LOKI_DISFRACES = {
+		"iron-man": "Magneto",
+		thor: "Odin",
+		hulk: "Thanos",
+	};
 
-const loki = LOKI_DISFRACES[ adversario ] || LOKI_DEFAULT;
+	const LOKI_DEFAULT = "Loki";
 
-console.log(loki);
+	return LOKI_DISFRACES[hero] || LOKI_DEFAULT;
+};
+
+noSwitch(adversario);
+console.log(
+	"🚀 ~ file: Untitled-1:17 ~ noSwitch(adversario)",
+	noSwitch(adversario)
+);

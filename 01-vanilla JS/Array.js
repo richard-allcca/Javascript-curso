@@ -1,29 +1,42 @@
 // ========================================================================
 //? AGREGAR Y QUITAR elementos
 // ========================================================================
+
 // unshift() -> AL INICIO agregar
+
 let arr3 = [1, 2, 3, 4]
 arr3.unshift(1)
+
 //.shift() -> AL INICIO quitar
+
 let arr4 = [1, 2, 3, 4]
 arr4.shift(1)
+
 //.push() -> AL FINAL agregar
+
 let arr1 = [1, 2, 3, 4]
 arr1.push(5)
 
 //.pop() -> AL FINAL quitar
+
 let arr2 = [1, 2, 3, 4]
 arr2.pop(5)
+
 //.splice() -> LUGAR desde donde?,cuantos elimina,que agregas...?
+
 let arr5 = [1, 2, 3, 4]
 arr5.splice(2, 1, 'hola')
+
 //.slice() -> REBANAR de donde- hasta donde?, sin modificar el original 
+
 let arr6 = [1, 2, 3, 4]
 arr6.slice(2, 3)
+
 //.join() -> UNIR es el contrario de split que divide este une convirtiendo todo en string
-let arr1 = ['hola', ' mundo', ' ingrato']
+
+let arr8 = ['hola', ' mundo', ' ingrato']
 document.write(arr1.join(''))
-let arr2 = [1, 2, 3, 4, 5, 6]
+let arr9 = [1, 2, 3, 4, 5, 6]
 console.log(arr2.join('')); //lo que pongas dentro de las comillas sera la separacion de los elementos
 
 // ======================================================================== 
@@ -41,6 +54,7 @@ console.log(resp);
 // reverse() sort() concat()
 
 // .sort() 
+
 arr1 = [20, 50, 10, 40,]
 document.write(arr1.sort((a, b) => a - b))
 
@@ -48,75 +62,88 @@ arr3 = [1, -2, 3]
 console.log(arr3.sort((a, b) => a - b))
 
 // orden aleatorio
+
 arr5 = [56, 15, 84, 33, 42, 61, 51, 12, 83]
 console.log(arr5.sort((a,b)=> Math.random()-0.5))
 
 
 // .reverse() ->ordena al reves los elementos de un array
+
 let arr7 = [1, 2, 3, 4]
 arr7.reverse()
 
 // .concat() -> para unir array - OJO une 2 ARRAY en uno solo
+
 arr1.concat(arr2)
 // une dos arrays los convierte en STRINGS 
 
 // ======================================================================== 
 //? OBTENER NUMERO MAYOR O MENOR 
 // ========================================================================
+
 //  ejemplo con ingreso directo de valores
 Math.min(30, 40, 50, 60);
 Math.max(30, 40, 50, 60);
 
 //  ejemplo con rest y array
-let number = [30, 40, 50, 60];
-console.log(Math.min(...number));
-console.log(Math.max(...number));
+let numbe = [30, 40, 50, 60];
+console.log(Math.min(...numbe));
+console.log(Math.max(...numbe));
 
 // ========================================================================
 //? BUSQUEDA DE ELEMENTOS 
 // ========================================================================
 
 // busqueda aleatoria
+
 const numbers = [1, 2, 3, 4, 5, 6, 7]
 const randomIndex = Math.floor(Math.random() * numbers.length )
 console.log(randomIndex);
 const letras = ['a','b','c','d','e','f']
-const randomIndex = Math.floor(Math.random() * letras.length )
+const randomIndex2 = Math.floor(Math.random() * letras.length )
 console.log(letras[randomIndex]);
 
 // .indexOf() retorna el indice o un -1 si no lo encuentra
+
 arr6 = [56, 15, 84, 33, 42, 61, 51, 12, 83]
 console.log(arr6.indexOf(42))//aqui pide la ubicacion del numero 42
 
 // .find(callback) busca valores espeficificos, undefined si no lo encuentra
+
 arr7 = [56, 15, 84, 33, 42, 61, 51, 12, 83]
 console.log(arr7.find(dato => dato > 84))/* aqui te pide el numero mayor de 50 */
 
 // .findIndex() -> se recomienda ordenarlos primero, retorna el indice
+
 arr8 = [56, 15, 84, 33, 42, 61, 51, 12, 83]
 console.log(arr8.sort((a, b) => a - b))// primero los ordenamos(opcional) 
 console.log(arr8.findIndex(pos => pos > 33))// pide el indice de 33
 
 // includes(desde,hasta)
+
 let array = ["richard", "fraddy", "abel"];
 const busqueda = (dato) => dato.includes("richard");
 console.log(busqueda(array))
 
-//some
-let num = [3, 4, 5, 6, 7]
-const resp = num.some(el => el === 4)
-console.log(resp);
+//some - retorna un boolean
+
+let lista = [
+  {name: 'midu', age:12},
+  {name: 'rich', age:14},
+  {name: 'cris', age:16}
+]
+console.log(lista.some(el => el.age > 14))
 
 // every
-let num = [3, 4, 5, 6, 7]
+let num2 = [3, 4, 5, 6, 7]
 console.log(num.every(el => (el === 'hola')))
 
-let num = ['richard', 'ruth', 'javier', 'alvaro', 'angel']
+let num3 = ['richard', 'ruth', 'javier', 'alvaro', 'angel']
 console.log(num.every(el => el.length >= 5))
 //comprueba si todos los elementos tienen al menos x cantidad de letra
 
-let num = ['richard', 'ruth', 'javier', 'alvaro', 'rangel']
-document.write(num.every(el => el.includes('r')))
+// let num4 = ['richard', 'ruth', 'javier', 'alvaro', 'rangel']
+console.log(num3.every(el => el.includes('r')))
 //comprueba si TODOS! tienen el elemento "r" 
 
 
@@ -124,6 +151,7 @@ document.write(num.every(el => el.includes('r')))
 //? ELIMINAR DUPLICADOS DE UN ARRAY CON SPREAD OPERATOR
 // ========================================================================
 // new Set() -> no permite datos duplicados 
+
 arr8 = [56, 15, 84, 33, 42, 61, 51, 15, 56, 12, 83]
 arr8.sort((a, b) => (a - b))//primero los ardenamos con sort(opcional)
 const removeDuplicate = arr => [...new Set(arr)]
@@ -166,8 +194,8 @@ number.forEach((element, i, number) => {
 //* Ejemplos de usar FOREACH  siempre recibe un callback
 
 // estructura basica para aprender
-let num = [3, 4, 5, 6, 7]
-num.forEach((el) => {
+let nume = [3, 4, 5, 6, 7]
+nume.forEach((el) => {
   el *= el
   console.log(el)
 })
@@ -192,6 +220,7 @@ https://www.youtube.com/watch?v=CsFwUX0hU2M
 // ==============================================================
 //? FLAT para mostrar el contenido de Arrays anidados en uno solo
 // ==============================================================
+
 const edades = [1, 2, 3, 4, [5, 6, 7, [8, 9, 10]]];
 
 // metodo simple para anidados hasta segundo nivel
