@@ -5,13 +5,9 @@
 
 ## DOM
 
-  (Document Objet Model) modelos de objetos del Documento, es una API para Documentos HTML y XML
-  Éste proveé una representación estructural del documento, permitiendo modificar su contenido y presentación visual mediante código JS.
+  Document Objet Model, modelos de objetos del Documento, es una API para Documentos HTML y XML
+  Éste proveé una representación estructural del documento, permite modificar su contenido y presentación visual.
   El DOM no es parte de la especificación de javaScript es una API  para los navegadores.
-
-## BOM
-
-  browser objet model
 
 ## CSSOM
 

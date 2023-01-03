@@ -8,20 +8,24 @@
   --second-modal-color: rgba(34, 34, 34, 0.85);
   --container-width: 1200px;
 }
+
 html {
   font-family: var(--main-font);
   font-size: var(--font-size);
   /* esto es muy importante para darle desplazamiento al ir a una sección */
   scroll-behavior: smooth;
 }
+
 body {
   /* margin: 0; no es necesario si tienes normalize */
   overflow-x: hidden;
   background-color: hsla(10, 0%, 60%, 0.5);
 }
+
 li {
   list-style: none;
 }
+
 /* ************ menu hamburguesa ************ */
 .header {
   position: sticky;
@@ -32,10 +36,12 @@ li {
   color: var(--second-color);
   border-bottom: 2px solid;
 }
+
 .header h1 {
   margin: 0;
   text-align: center;
 }
+
 .section {
   /* padding: 4rem 2rem 2rem 0px; */
   padding-top: 5rem;
@@ -46,6 +52,7 @@ li {
   text-align: center;
   /* height: 100%; */
 }
+
 .panel {
   height: 100vh;
   overflow-y: auto;
@@ -67,11 +74,13 @@ li {
   /*primer 1° parametro de translate eje X,  2° eje Y */
   transform: translate(-100%, 0);
 }
+
 .panel.is-active {
   transform: translate(0, 0);
   opacity: 1;
   visibility: visible;
 }
+
 .panel-btn {
   z-index: 999;
   position: fixed;
@@ -80,16 +89,19 @@ li {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  padding: 0; /* para que las lineas del menu que estan echas con pseudo elementos quede centrado */
+  padding: 0;
+  /* para que las lineas del menu que estan echas con pseudo elementos quede centrado */
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--main-color);
 }
+
 .panel-btn:hover {
   transition: 0.3s ease;
   transform: scale(1.1);
 }
+
 /****** flecha de Jon ********/
 
 .scroll-top-btn {
@@ -109,14 +121,17 @@ li {
   cursor: pointer;
   transition: all 0.3s ease-out;
 }
+
 .scroll-top-btn:hover {
   background-color: var(--second-color);
   color: var(--main-color);
 }
+
 .hidden {
   visibility: hidden;
   opacity: 0;
 }
+
 /* boton modo oscuro */
 .dark-theme-btn {
   z-index: 999;
@@ -135,10 +150,12 @@ li {
   cursor: pointer;
   transition: all 0.3s ease-out;
 }
+
 .dark-theme-btn:hover {
   background-color: var(--second-color);
   color: var(--main-color);
 }
+
 .dark-mode {
   background-color: var(--second-color);
   color: var(--main-color);
@@ -172,6 +189,7 @@ li {
   align-items: center;
   text-align: center;
 }
+
 .menu a {
   padding: 1.5rem;
   width: inherit;
@@ -185,10 +203,11 @@ li {
 }
 
 /* **********  Reloj y Alarma  ******************* */
-.reloj-btns > * {
+.reloj-btns>* {
   margin-top: 1rem;
   padding: 0.3rem;
 }
+
 /* **********  Eventos del teclado  ******************* */
 
 .stage {
@@ -198,6 +217,7 @@ li {
   min-height: 50vh;
   background-color: var(--second-color);
 }
+
 .ball {
   margin: auto;
   width: 4rem;
@@ -205,9 +225,11 @@ li {
   border-radius: 50%;
   background-color: var(--main-color);
 }
+
 .ball-dark-mode {
   background-color: var(--second-color);
 }
+
 .panel-dark-mode {
   background-color: hsl(0, 0%, 60%);
   color: #222;
@@ -216,10 +238,12 @@ li {
 #seccion4 {
   width: 460px;
 }
+
 #youtube {
   box-shadow: 3px 3px 10px rgba(17, 13, 13, 0.8);
   margin-bottom: 15px;
 }
+
 #gmaps {
   box-shadow: 3px 3px 10px rgba(17, 13, 13, 0.8);
   margin-bottom: 10px;
@@ -250,6 +274,7 @@ li {
   gap: 15px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
+
 .card {
   background-color: var(--second-color);
   color: var(--main-color);
@@ -258,10 +283,12 @@ li {
   /* margin: 15px; */
   box-shadow: -5px 5px 3px var(--second-color-media);
 }
+
 .card img {
   width: 100%;
   height: auto;
 }
+
 .card figcaption {
   padding: 1rem;
 }
@@ -273,27 +300,31 @@ li {
   opacity: 0;
   /* display: none; */
 }
+
 /* ************* Responsive Tester *************** */
-.form-tester > * {
+.form-tester>* {
   width: 50%;
   padding: 0.5rem;
   margin: 0.4rem;
   font-family: sans-serif;
 }
+
 .form-tester [type="submit"],
 .form-tester [type="button"] {
   width: 20%;
 }
 
 /* ************* sorteo digital *************** */
-.players > * {
+.players>* {
   display: flex;
   justify-content: center;
 }
+
 .player {
   margin-left: -30px;
   padding: 0.4rem;
 }
+
 .boton-sorteo {
   background-color: hsl(236, 80%, 63%);
   padding: 1em;
@@ -301,6 +332,7 @@ li {
   border-radius: 5px;
   margin-right: 1.5625rem;
 }
+
 /* ************* Video Inteligente *************** */
 video {
   /* width: 400px; */
@@ -314,11 +346,13 @@ video {
   margin: 1rem auto;
   text-align: center;
 }
+
 .sliders-slides {
   position: relative;
   /* aqui le damos altura al contenedor dela diapositiva */
   height: 400px;
 }
+
 .slider-slide {
   /* obsolte para que se acomode al 1° contendor padre con realtive si no lo encuentra se acomoda al body */
   position: absolute;
@@ -332,6 +366,7 @@ video {
   opacity: 0;
   transition: opacity 1s ease;
 }
+
 .slider-slide img {
   height: inherit;
   width: inherit;
@@ -340,10 +375,12 @@ video {
   /* juega con la posición x y  */
   object-position: 50% 50%;
 }
+
 .slider-slide.active {
   opacity: 1;
   visibility: visible;
 }
+
 /* botones slider */
 .sliders a {
   display: block;
@@ -357,6 +394,7 @@ video {
   color: hsl(0, 0%, 0%);
   transition: all 0.3s ease;
 }
+
 .sliders-btns {
   width: 100%;
   /* con absolute pierde su tamaño y x eso necesita width 100% */
@@ -368,6 +406,7 @@ video {
   font-size: 3em;
   font-weight: bold;
 }
+
 .sliders a:hover {
   color: hsl(0, 0%, 30%);
 }
@@ -379,6 +418,7 @@ video {
   justify-content: center;
   align-content: center;
 }
+
 .punto {
   display: inline-block;
   width: 10px;
@@ -387,10 +427,12 @@ video {
   border-radius: 50%;
   margin-left: 5px;
 }
+
 .active_punto {
   transform: scale(1.3);
   background-color: aqua;
 }
+
 /* *********** Formulario *********** */
 .contact-form {
   --form-ok-color: hsl(122, 39%, 49%);
@@ -400,43 +442,52 @@ video {
   width: 80%;
   /* border: 1px solid; */
 }
-.contact-form > * {
+
+.contact-form>* {
   display: block;
   padding: 0.5rem;
   margin: 1rem;
   width: 100%;
   margin-left: 0px;
 }
+
 .contact-form textarea {
   resize: none;
 }
+
 .contact-form legend,
 .contact-form-response {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
 }
+
 .contact-form input,
 .contact-form textarea {
   font-size: 1rem;
   font-family: sans-serif;
 }
+
 .contact-form input[type="submit"] {
   width: 50%;
   font-weight: bold;
   cursor: pointer;
   margin-left: 25%;
 }
+
 /* todos los contenidos que tengas el atributo placeholder */
 .contact-form *::placeholder {
   color: hsl(0, 0%, 0%);
 }
+
 .contact-form [required]:valid {
   border: thin solid var(--form-ok-color);
 }
+
 .contact-form [required]:invalid {
   border: thin solid var(--form-error-color);
 }
+
 /* msj de error con js */
 .contact-form-error {
   margin-top: -1rem;
@@ -445,27 +496,32 @@ video {
   color: hsl(0, 0%, 100%);
   transition: all 800ms ease;
 }
+
 .contact-form-error.is-active {
   display: block;
   /* animacion show-message dura, cuantas veces se ejecuta, forma de ejecucion(normal),no tiene retardo(0), efecto de animacon ease-out(afuera), va conservar los estilos con los que termine */
   animation: show-message 1s 1 normal 0s ease-out both;
 }
+
 .none {
   display: none;
 }
+
 /* animación */
 @keyframes show-message {
   0% {
     visibility: hidden;
     opacity: 0;
   }
+
   100% {
     visibility: visible;
     opacity: 1;
   }
 }
+
 /* *********** loader form *********** */
-.contact-form-loader > * {
+.contact-form-loader>* {
   width: 50px;
   /* background: red; */
 }
@@ -474,15 +530,18 @@ video {
 #speech-select {
   padding: 5px;
 }
+
 #speech-text {
   resize: none;
   border-radius: 8px;
   padding: 0.3rem;
 }
+
 #speech-btn {
   padding: 0.5rem;
   border-radius: 5px;
 }
+
 /* *********** Responsive Media *********** */
 @media screen and (min-width: 1024px) {
   body {
@@ -493,9 +552,11 @@ video {
       " header header"
       " main panel";
   }
+
   .header {
     grid-area: header;
   }
+
   /* main,
   ul > .players {
     margin: 0;
@@ -505,7 +566,8 @@ video {
     grid-area: panel;
     position: sticky;
     top: 4rem;
-    align-self: flex-start; /* FIXME */
+    align-self: flex-start;
+    /* FIXME */
     justify-content: flex-start;
     background-color: hsl(0, 0%, 10%);
     border-left: 5px solid hsl(0, 0%, 30%);
@@ -515,23 +577,28 @@ video {
     visibility: visible;
     overflow-y: auto;
   }
+
   .panel-btn {
     display: none;
   }
+
   .menu {
     justify-content: center;
     text-align: right;
   }
+
   .menu a {
     color: hsl(0, 0%, 60%);
     font-size: 1.03rem;
     padding: 0.7rem;
   }
+
   .menu a:hover,
   .menu a.active {
     color: var(--second-color);
     background-color: var(--main-color);
   }
+
   .scroll-top-btn {
     right: initial;
     left: calc(4.25rem + 1vw);
