@@ -7,28 +7,69 @@
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta name="description" content="65caracteres">
   <title>Delegación de Eventos</title>
-  <link rel="stylesheet" href="delegacion.css">
 </head>
+
+<!-- Style -->
+
+<style>
+  body {
+    background-color: hsl(55, 18%, 57%);
+  }
+
+</style>
+
+<!-- body -->
 
 <body>
   <h1>Eventos en Javascript</h1>
   <h2>Delegación de Eventos</h2>
   <p>Un manejador se le llama cuando se ejecutan funciones dentro del evento</p>
 
-  <!-- evento poco recomendado como atributo del html -->
+  <!-- Evento como atributo del html -->
+
   <button onclick="alert('hola mundo')">Evento con atributo HTML</button>
 
-  <!-- evento poco recomendado como atributo del html desde Js -->
+  <!-- Evento como atributo desde Js -->
+
   <button onclick="holaMundo()">Evento ejecutado desde Js</button>
   <br><br>
 
-  <!-- Manejador de eventos o delegando eventos  -->
+  <!-- Manejador de eventos  -->
+
   <button id="evento-semantico">Evento con manejador semantico</button>
   <p>por la coherencia en la manera en que se va definiendo</p>
+
+  <!-- Eventos multiples con listerner -->
 
   <button id="evento-multiple">Evento con manejador multiple</button>
   <p>por la coherencia en la manera en que se va definiendo</p>
 </body>
-<script src="delegandoEventos.js"></script>
+
+<!-- Script -->
+
+<script>
+
+  const d = document;
+
+  // NOTE - Desventajas, no puede recibir parametros, solo puede tener una fución asignada 
+  const $eventoSemantico = d.getElementById("evento-semantico");
+
+  const holaMundo = (e) => {
+    alert('hola mundo desde js');
+    console.log('event', event);
+  };
+
+  $eventoSemantico.onclick = holaMundo;
+
+  const $eventoMultiple = d.getElementById("evento-multiple");
+
+  $eventoMultiple.addEventListener("click", (e) => {
+    alert('Manejador de eventos multiples');
+    console.log(e);
+    console.log(e.type);
+    console.log(e.target);
+  })
+
+</script>
 
 </html>

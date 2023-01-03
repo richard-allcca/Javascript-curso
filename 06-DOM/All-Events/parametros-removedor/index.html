@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="65caracteres">
+  <title>Parametros y Remover eventos</title>
+</head>
+
+<body>
+  <button id="evento-multiple">Evento Multiple con parametros</button>
+  <br><br>
+
+  <button id="evento-remover">remover eventos con manejadores Multiples</button>
+</body>
+
+<script>
+
+  // =======================================================
+  // Eventos con parametros
+  // =======================================================
+
+  const $eventoMultiple = document.getElementById('evento-multiple');
+
+  function saludo(nombre = 'desconocid@') {
+    console.log(`hola ${nombre}`);
+  }
+
+  // you must use arrow funtions and within these, use funtions with parameters
+  $eventoMultiple.addEventListener('click', () => {
+    saludo();
+    saludo('richard');
+  });
+
+
+  // =======================================================
+  // ELIMINAR eventos 
+  // =======================================================
+  // Para remover evento necesita una función declarada o expresada (asignada)
+
+  const $eventoRemover = document.getElementById('evento-remover');
+
+  const eliminarEvent = (e) => {
+    alert(`Removiendo el evento de tipo ${e.type}`);
+    console.log(e);
+
+    $eventoRemover.disabled = true;
+
+    $eventoRemover.removeEventListener('dblclick', eliminarEvent);
+  };
+
+  $eventoRemover.addEventListener("dblclick", eliminarEvent)
+
+</script>
+
+</html>

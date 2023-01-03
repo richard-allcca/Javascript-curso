@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="65caracteres">
+  <title>Flujo y Burbuja de Captura</title>
+</head>
+
+<!-- Style -->
+
+<style>
+  body {
+    background-color: hsl(240, 27%, 55%);
+  }
+
+  .eventos-flujo div {
+    padding: 4rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .uno {
+    background-color: yellow;
+  }
+
+  .dos {
+    background-color: gold;
+  }
+
+  .tres {
+    background-color: lightyellow;
+  }
+
+</style>
+
+<!-- Body -->
+
+<body>
+
+  <h4>Flujo de Eventos</h4>
+
+  <section class="eventos-flujo">
+    <div class="uno">
+      1
+      <div class="dos">
+        2
+        <div class="tres">
+          3
+          <br>
+          <a href="https://jonmircha.com/" target="_blank" rel="noopener">jonmircha.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+<!-- Script -->
+
+<script>
+
+  // NOTE - 
+  // El evento del addEventListener tiene 3 parametros pero por uso comun solo usamos 2 
+  // El tercer parametro indica el tipo de "PROPAGACIÓN" que tendra el evento
+  // Evento Burbuja desde dentro hacia afuera o Captura desde afuera hacia dentro
+
+  // captura todos los div dentro de el elemento con la clase "eventos-flujo"
+  const $divsEventos = document.querySelectorAll(".eventos-flujo div");
+
+  function flujoEventos(e) {
+    console.log(`Hola te saluda ${this.className}, el click lo origino ${e.target.className} `);
+  }
+
+  console.log($divsEventos);
+
+  $divsEventos.forEach((div) => {
+
+    // Face de burbuja sin el 3° parametro (por defecto es "false")
+    div.addEventListener("click", flujoEventos);
+
+    // Face captura, indicamos el tercer parametro como objeto
+    div.addEventListener("click", flujoEventos, {
+      // que tipo sera el evento burbuja(false),capture(true)
+      capture: false,
+      // once indica si el evento se ejecuta una sola vez
+      once: true
+    });
+
+  });
+
+
+</script>
+
+</html>

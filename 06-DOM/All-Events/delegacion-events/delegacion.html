@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="65caracteres">
+  <title>Delegación de Eventos</title>
+</head>
+
+<!-- Styles -->
+
+<style>
+  body {
+    background-color: hsl(240, 27%, 55%);
+  }
+
+  .eventos-flujo div {
+    padding: 4rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .uno {
+    background-color: yellow;
+  }
+
+  .dos {
+    background-color: gold;
+  }
+
+  .tres {
+    background-color: lightyellow;
+  }
+
+</style>
+
+<!-- Body -->
+
+<body>
+
+  <h4>Delegación de Eventos</h4>
+
+  <section class="eventos-flujo">
+    <div class="uno">
+      1
+      <div class="dos">
+        2
+        <div class="tres">
+          3
+          <br>
+          <a href="https://jonmircha.com/" target="_blank" rel="noopener">jonmircha.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+<!-- Script -->
+
+<script>
+
+  // NOTE 
+  // El addEventListener tiene 3 parametros pero por uso comun solo usamos 2
+  // el tercer parametro indica el tipo de "Propagacion" que tendra el evento
+  // Burbuja desde dentro hacia afuera o Captura desde afuera hacia dentro
+
+  const d = document;
+
+  d.addEventListener("click", (e) => {
+    console.log("Click en:", e.target);
+
+    if (e.target.matches(".eventos-flujo div")) {
+      flujoEventos(e);
+    }
+
+    if (e.target.matches(".eventos-flujo a")) {
+      alert("Hola soy tu amigo y docente digital...Jonathan");
+      e.preventDefault();
+    }
+
+  })
+
+</script>
+
+</html>
